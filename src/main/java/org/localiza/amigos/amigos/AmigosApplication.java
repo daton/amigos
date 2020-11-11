@@ -24,10 +24,10 @@ RepoHola repoHola;
 	//	Hola h=new Hola();
 	//	h.setMensaje("Mi segundo mensajito de spring");
 		//De las opreaciones CRUD es es la "C" "create" o guardar o save
-		//repoHola.save(h);
+	//	repoHola.save(h);
 		//Ahora veremos desde aqui cómo leer o hacer una busqueda. (En BD SQL es SELECT)
-		  for(Hola h:repoHola.findAll()){
-			  System.out.println(h.getMensaje());
+		  for(Hola hh:repoHola.findAll()){
+			  System.out.println(hh.getMensaje());
 		  }
 
 	}
