@@ -36,8 +36,8 @@ public class ControladorUsuario {
         //Ahora si lo guardamos
         repoUsuario.save(u);
         Estatus estatus=new Estatus();
-        estatus.mensaje="Se guardo el usuario";
-        estatus.success=true;
+ estatus.setSuccess(true);
+ estatus.setMensaje("Usuario guardado con exito!");
         return  estatus;
 
     }
