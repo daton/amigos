@@ -22,6 +22,8 @@ public class ControladorUsuario {
      return repoUsuario.findAll();
  }
 
+
+
  //Este busca por id
  @GetMapping("/usuario/{id}")
     public Usuario buscarPorId(@PathVariable String id){
