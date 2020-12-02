@@ -10,16 +10,27 @@ public class Usuario {
     @Id
     String nickname;
  String    nombre;
+ String idAndroid;
  String    paterno;
  String   email;
  ArrayList<Coordenada>   coordenadas;
- public Usuario(){}
+
+    public String getIdAndroid() {
+        return idAndroid;
+    }
+
+    public void setIdAndroid(String idAndroid) {
+        this.idAndroid = idAndroid;
+    }
+
+    public Usuario(){}
 
     @Override
     public String toString() {
         return "Usuario{" +
                 "nickname='" + nickname + '\'' +
                 ", nombre='" + nombre + '\'' +
+                ", idAndroid='" + idAndroid + '\'' +
                 ", paterno='" + paterno + '\'' +
                 ", email='" + email + '\'' +
                 ", coordenadas=" + coordenadas +
