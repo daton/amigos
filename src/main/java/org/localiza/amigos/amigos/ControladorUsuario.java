@@ -30,7 +30,16 @@ public class ControladorUsuario {
 
      return  repoUsuario.findById(id).get();
  }
- //El siguiente metodo sirve para guardar
+    @GetMapping("/usuario-borrar/{id}")
+    public Estatus borrarPorId(@PathVariable String id){
+
+          repoUsuario.deleteById(id);
+          Estatus e=new Estatus();
+          e.setMensaje("Borrado");
+          e.setSuccess(true);
+          return e;
+    }
+ //El siguiente metodo sirve para guardar y registar 
     @PostMapping("/usuario")
     public Estatus guardar(@RequestBody String json)throws  Exception{
         ObjectMapper mapper=new ObjectMapper();
@@ -38,6 +47,7 @@ public class ControladorUsuario {
         //Ahora si lo guardamos
         repoUsuario.save(u);
         Estatus estatus=new Estatus();
+        System.out.println("llego "+u );
  estatus.setSuccess(true);
  estatus.setMensaje("Usuario guardado con exito!");
         return  estatus;
